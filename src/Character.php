@@ -14,8 +14,8 @@ class Character
         $victim-> setHealth($victimLifePoints);
     }
 
-    public function setHealth(int $lifePoints, Character $character) {
-        $character->health = $lifePoints;
+    public function setHealth(int $lifePoints) {
+        $this->health = $lifePoints;
     }
     
     public function getHealth()
