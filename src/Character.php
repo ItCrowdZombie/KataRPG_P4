@@ -28,9 +28,21 @@ class Character
        return $this->level;
     }
 
+    public function die() {
+        $this->health = 0;
+        $this->alive = false;
+    }
+
    public function isAlive()
    {
        return $this->alive;
     }
+
+    public function checkHealthVsDamage() {
+        if($damage >= $victim->getHealth()) {
+        $victim->die();
+        }
+    }
+    
 
 }
