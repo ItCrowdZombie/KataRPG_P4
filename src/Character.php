@@ -10,8 +10,9 @@ class Character
     
     public function hit($damaged, Character $victim) {
         $victimLifePoints = $victim->getHealth(); 
-        $victimLifePoints -= $damaged;
+        $victimLifePoints -= $damaged; 
         $victim-> setHealth($victimLifePoints);
+        $victim->checkHealth(); 
     }
 
     public function setHealth(int $lifePoints) {
@@ -38,9 +39,9 @@ class Character
        return $this->alive;
     }
 
-    public function checkHealthVsDamage() {
-        if($damage >= $victim->getHealth()) {
-        $victim->die();
+    public function checkHealth() {
+        if(0 >= $this->getHealth()) {
+        $this->die();
         }
     }
     

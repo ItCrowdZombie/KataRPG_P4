@@ -55,4 +55,3 @@ class CharacterTest extends TestCase
     }
 
 }
-
