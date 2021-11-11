@@ -39,6 +39,16 @@ class CharacterTest extends TestCase
 
         $this-> assertEquals(900, $damaged->getHealth());
     }
+
+    public function damage_exceeds_Health_it_becomes_0_and_character_dies() {
+
+        given
+        $damaged = new Character();
+        then
+        $attaker->hit($damaged->getHealth(),$damaged);
+        //damage > health = health = 0 
+        //health = 0 = character is alive = false
+
+
 }
 
-hola
